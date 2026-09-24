@@ -403,7 +403,6 @@ footer p {
 
 @media (max-width: 800px) {
 
-    /* Header */
     header {
         flex-direction: column;
 
@@ -461,8 +460,6 @@ footer p {
         font-size: 16px;
     }
 
-
-    /* Projecten */
     #projecten {
         padding: 30px 20px;
     }
@@ -477,8 +474,6 @@ footer p {
         width: 100%;
     }
 
-
-    /* Blog */
     #blog {
         padding: 30px 20px;
     }
@@ -492,7 +487,6 @@ footer p {
 
 @media (max-width: 600px) {
 
-    /* Navigatie */
     nav ul {
         gap: 15px;
     }
@@ -501,8 +495,6 @@ footer p {
         font-size: 14px;
     }
 
-
-    /* Contact */
     #contact {
         padding: 30px 20px;
     }
@@ -519,8 +511,6 @@ footer p {
         width: 100%;
     }
 
-
-    /* Algemene tekst */
     #projecten h2,
     #blog h2 {
         font-size: 26px;
