@@ -97,9 +97,47 @@ main {
     flex: 1;
 }
 
+.intro-weer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+.weer-foto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#weer {
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+}
+
+#weer h2 {
+    margin-bottom: 20px;
+}
+
+#temperatuur {
+    font-size: 35px;
+}
+
+.weer-foto img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 1px black outset;
+}
 #who-am-i {
     background-color: #f5f5f5;
-    border-bottom: 1px solid black;
+    border: 1px outset black;
 
     padding: 40px;
 }
@@ -194,82 +232,73 @@ main {
 }
 
 #projecten {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid black;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 40px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
 #projecten h2 {
-    text-align: center;
-
-    font-size: 30px;
-
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
-.project-grid {
-    width: 100%;
-    max-width: 1000px;
+#categorie-filter {
+    font: inherit;
+    padding: 8px 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #888;
+    border-radius: 6px;
+}
 
+.projecten-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 30px;
-
-    margin-top: 40px;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 250px), 1fr)
+    );
+    gap: 25px;
 }
 
-.project-card {
-    display: flex;
-    flex-direction: column;
-
-    padding: 25px;
-
-    background-color: white;
-
+.project-kaart {
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 15px;
-
-    text-decoration: none;
-    color: black;
-
-    transition: 0.3s ease;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 8%);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
-    border-color: #e66ba6;
+.project-kaart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgb(0 0 0 / 15%);
 }
 
-.project-card h3 {
-    margin-top: 0;
+.project-kaart img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 
+.project-kaart h3 {
+    margin-bottom: 10px;
     color: #e66ba6;
 }
 
-.project-card img {
-    width: 100%;
-    max-width: 300px;
-    height: 180px;
-
-    object-fit: contain;
-
-    margin: 20px auto;
+.project-kaart p {
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-.project-card span {
-    margin-top: auto;
-
+.project-kaart a {
+    display: inline-block;
     color: #e66ba6;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.project-kaart a:hover {
+    text-decoration: underline;
 }
 
 #blog {
@@ -399,6 +428,78 @@ footer p {
     color: #c4c1c1;
 
     margin-bottom: 20px;
+}
+
+.contact {
+    width: 100%;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#contactFormulier {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contactFormulier label {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#contactFormulier input,
+#contactFormulier textarea {
+    font-family: "Consolas", sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid black;
+    background-color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+#contactFormulier input:focus,
+#contactFormulier textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+#contactFormulier textarea {
+    resize: vertical;
+}
+
+#contactFormulier button {
+    width: fit-content;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-family: "Consolas", sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactFormulier button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#melding {
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 @media (max-width: 800px) {
