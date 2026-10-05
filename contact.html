@@ -26,27 +26,37 @@
             Heb je een vraag of iets anders? Neem gerust contact met me op om te spreken!
         </p>
 
-        <form id="contactFormulier">
+        <form id="contactFormulier" novalidate>
         <label for="naam">Naam:</label>
         <input 
         type="text" 
         id="naam"
         name="naam" 
-        required>
+        required
+        aria-describedby="naam-error"
+        aria-invalid="false">
+        <span id="naam-error" role="alert"></span>
+
 
         <label for="email">Email:</label>
         <input 
         type="email"
         id="email"
         name="email"
-        required>
+        required
+        aria-describedby="email-error"
+        aria-invalid="false">
+        <span id="email-error" role="alert"></span>
 
         <label for="bericht">Bericht:</label>
         <textarea 
         id="bericht"
         name="bericht"
         required
+        aria-describedby="bericht-error"
+        aria-invalid="false"
         ></textarea>
+        <span id="bericht-error" role="alert"></span>
 
         <button type="submit">Verstuur</button>
      </form>
